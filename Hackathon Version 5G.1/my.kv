@@ -1,0 +1,71 @@
+#:import utils kivy.utils
+<MyGrid>:
+	
+	name: mall
+	email: mall
+
+	GridLayout:
+		cols: 1
+		size: root.width - 20, root.height - 20
+		pos: 10, 10
+		canvas:
+			Color: 
+				rgba: 0.57,0.75,1,1
+			Rectangle:
+				size : root.width, root.height
+				pos : 0, 0
+
+		TextInput:
+			size_hint_y : None
+			height: root.height*0.07
+			color: 0.5,0.5,0.5,1
+			background_normal: ''
+			text: "Search"
+			font_size: 20
+			multiline: False
+
+		GridLayout:
+			cols: 2	
+			GridLayout:
+				cols: 1
+				padding: [root.width*0.05, root.height*0.1]		
+				Image:
+				    source: 'restaurant.png'
+				    size: self.texture_size
+				Label:
+					text: "Dining"
+					font_size: 20
+
+
+			GridLayout:
+				cols: 1
+				padding: [root.width*0.05, root.height*0.1]		
+				Image:
+				    source: 'football.png'
+				    size: self.texture_size
+				Label:
+					text: "Sports"
+					font_size: 20
+
+
+			GridLayout:
+				cols: 1
+				padding: [root.width*0.05, root.height*0.1]		
+				Image:
+					id : mall
+				    source: 'Shopping.png'
+				    size: self.texture_size
+				Label:
+					text: "Shopping"
+					font_size: 20
+
+			GridLayout:
+				cols: 1
+				padding: [root.width*0.05, root.height*0.1]		
+				Image:
+				    source: 'entertainment.png'
+				    size: self.texture_size
+				Label:
+					text: "Entertainment"
+					font_size: 20
+		

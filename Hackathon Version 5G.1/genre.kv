@@ -1,0 +1,105 @@
+#:import utils kivy.utils
+<MyGrid>:
+	
+
+	GridLayout:
+		cols: 1
+		size: root.width - 20, root.height - 20
+		pos: 10, 10
+		canvas:
+			Color: 
+				rgba: 0.57,0.75,1,1
+			Rectangle:
+				size : root.width, root.height
+				pos : 0, 0
+
+		Label:
+			text: "Shopping Malls"
+			size_hint: (0.5, None)
+			height: root.height*0.07
+			font_size: 30
+			color:  [0,0,0,0.75]
+
+		TextInput:
+			size_hint_y : None
+			height: root.height*0.07
+			color: 0.5,0.5,0.5,1
+			background_normal: ''
+			text: "Search"
+			font_size: 20
+			multiline: False
+
+		ScrollView:
+			do_scroll_x: False
+			do_scroll_y: True
+		
+			GridLayout:
+				cols: 1	
+				
+				GridLayout:
+					cols: 1
+					padding: [root.width*0.05, root.height*0.1]		
+					Button:
+						text: "Mall of Qatar"
+						size_hint : [None, None]
+						size: [root.width*0.8, root.height*0.15]
+
+					GridLayout:
+						cols: 2
+						Button:
+							text: "Time: "
+							size_hint : [None, None]
+							size: [root.width*0.4, root.height*0.15]
+						Button:
+							text: "Rush: "
+							size_hint : [None, None]
+							size: [root.width*0.4, root.height*0.15]
+
+
+				GridLayout:
+					cols: 1
+					padding: [root.width*0.05, root.height*0.1]		
+					Button:
+						text: "Doha Festival City"
+						size_hint : [None, None]
+						size: [root.width*0.8, root.height*0.15]
+					GridLayout:
+						cols: 2
+						Button:
+							text: "Time: "
+							size_hint : [None, None]
+							size: [root.width*0.4, root.height*0.15]
+						Button:
+							text: "Rush: "
+							size_hint : [None, None]
+							size: [root.width*0.4, root.height*0.15]
+
+
+				GridLayout:
+					cols: 1
+					padding: [root.width*0.05, root.height*0.1]		
+					Button:
+						text: "Villagio"
+						size_hint : [None, None]
+						size: [root.width*0.8, root.height*0.15]
+					GridLayout:
+						cols: 2
+						Button:
+							text: "Time: "
+							size_hint : [None, None]
+							size: [root.width*0.4, root.height*0.15]
+						Button:
+							text: "Rush: "
+							size_hint : [None, None]
+							size: [root.width*0.4, root.height*0.15]
+
+				
+				GridLayout:
+					cols: 1
+					padding: [root.width*0.05, root.height*0.1]		
+					Button:
+						text: "City Centre"
+						size_hint : [None, None]
+						size: [root.width*0.8, root.height*0.15]
+
+			
